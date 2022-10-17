@@ -1,3 +1,16 @@
+export const dataConverter = {
+	toFirestore: data => {
+		return data;
+	},
+	fromFirestore: (snapshot, options) => {
+		const data = snapshot.data(options);
+		data.data.forEach((d, i) => {
+			data.data[i].id = i;
+		});
+		return data;
+	},
+};
+
 export const fsDataConverter = {
 	toFirestore: data => {
 		const subfoldersMap = {};

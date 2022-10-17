@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Box, Typography, Button } from '@mui/material';
-
+import { Link } from 'react-router-dom';
 import AppTitle from '../../atoms/app-title/appTitle.component';
 
 const StyledHr = styled.hr`
@@ -33,20 +33,52 @@ const LandingPage = () => {
 					}}
 				>
 					<Box sx={{ marginRight: 4 }}>
-						<Typography
-							variant='p'
-							sx={{ fontWeight: '500', fontSize: '1.1rem' }}
+						<Link
+							to='/'
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+							}}
 						>
-							Contact Us
-						</Typography>
+							<Typography
+								variant='p'
+								sx={{ fontWeight: '500', fontSize: '1.1rem' }}
+							>
+								Home
+							</Typography>
+						</Link>
 					</Box>
 					<Box sx={{ marginRight: 4 }}>
-						<Typography
-							variant='p'
-							sx={{ fontWeight: '500', fontSize: '1.1rem' }}
+						<Link
+							to='/about'
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+							}}
 						>
-							Discover
-						</Typography>
+							<Typography
+								variant='p'
+								sx={{ fontWeight: '500', fontSize: '1.1rem' }}
+							>
+								About Us
+							</Typography>
+						</Link>
+					</Box>
+					<Box sx={{ marginRight: 4 }}>
+						<Link
+							to='/contact'
+							style={{
+								textDecoration: 'none',
+								color: 'inherit',
+							}}
+						>
+							<Typography
+								variant='p'
+								sx={{ fontWeight: '500', fontSize: '1.1rem' }}
+							>
+								Contact
+							</Typography>
+						</Link>
 					</Box>
 				</Box>
 

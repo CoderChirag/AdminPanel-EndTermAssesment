@@ -1,10 +1,7 @@
-import LandingPage from "../../components/organisms/landing-page/landingPage.component";
+import React from 'react';
+import LandingPage from '../../components/organisms/landing-page/landingPage.component';
 const HomeRoute = () => {
-	return (
-		<div className=''>
-			<LandingPage></LandingPage>
-		</div>
-	);
-}
+	return <LandingPage />;
+};
 
 export default HomeRoute;

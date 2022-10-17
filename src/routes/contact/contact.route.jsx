@@ -1,17 +1,17 @@
 import { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
 
 import { UserContext } from '../../contexts/user/user.context';
 import AuthPage from '../../components/organisms/auth-page/authPage.component';
+import ContactPage from '../../components/organisms/contact-page/contactPage.component';
 
-const AuthRoute = () => {
+const ContactRoute = () => {
 	const { currentUser } = useContext(UserContext);
 
 	return currentUser || window.localStorage.getItem('currentUser') ? (
-		<Navigate to='/admin' />
+		<ContactPage />
 	) : (
 		<AuthPage />
 	);
 };
 
-export default AuthRoute;
+export default ContactRoute;

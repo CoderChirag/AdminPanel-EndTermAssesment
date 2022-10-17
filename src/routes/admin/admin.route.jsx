@@ -1,14 +1,13 @@
 import { useLocation } from 'react-router-dom';
 
 import RouteProtection from '../../components/molecules/route-protection/routeProtection.component';
-import HomePage from '../../components/organisms/home-page/home.component';
-
+import AdminPage from '../../components/organisms/admin-page/admin.component';
 
 const FileSystemRoute = () => {
 	const location = useLocation();
 	return (
 		<RouteProtection>
-			<HomePage />
+			<AdminPage />
 		</RouteProtection>
 	);
 };
